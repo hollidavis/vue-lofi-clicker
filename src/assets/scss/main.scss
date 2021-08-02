@@ -22,3 +22,12 @@ main {
   display: flex;
   align-items: stretch;
 }
+
+.side-bar-scroll{
+  overflow-y: auto;
+  height: 60vh;
+}
+
+.click-img{
+  max-height: 325px;
+}
