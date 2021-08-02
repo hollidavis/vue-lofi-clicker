@@ -92,7 +92,6 @@
 
 <script>
 import { reactive } from '@vue/reactivity'
-import { onMounted } from '@vue/runtime-core'
 export default {
   name: 'Home',
   setup() {
