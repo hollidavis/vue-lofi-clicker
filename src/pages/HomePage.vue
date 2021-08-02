@@ -141,6 +141,16 @@ export default {
         }
       ]
     })
+
+    setInterval(autoClick, 1000)
+
+    function autoClick() {
+      for (let i = 0; i < state.autoUpgrades.length; i++) {
+        const upgrade = state.autoUpgrades[i]
+        state.beats += upgrade.bonus * upgrade.count
+      }
+    }
+
     return {
       state,
       buy(upgrade) {
@@ -154,15 +164,8 @@ export default {
         autoUpgrade.cost = autoUpgrade.cost * 2
         state.autoClick += autoUpgrade.bonus
         autoUpgrade.count++
-      },
-      startInterval() {
-        setInterval(this.autoClick, 1000)
-      },
-      autoClick() {
-        for (let i = 0; i < state.autoUpgrade.length; i++) {
-          state.beats += i.bonus * i.count
-        }
       }
+
     }
   }
 }
